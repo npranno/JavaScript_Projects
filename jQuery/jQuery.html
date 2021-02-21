@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    $(document).ready(function() { //$ is shorthand for jQuery
+        $("html").append( //calling the html to make all these following changes
+            //the forward slashes indicate a line break
+           "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        $("#2").css({"color":"red"}); //this changes the paragraph with id 2 to the color red
+        $("#3").click(function() { //when paragraph id 3 is clicked
+            $('h1').hide("slow"); //this creates a function to hide the h1 element slowly 
+        $("1").on("click", function() {
+            console.log("You clicked Paragraph 1!"); //this shows in console when you click paragraph 1
+        });
+        });
+    });
+
+
+
+</script>
+<body>
+
+</body>
+</html>
